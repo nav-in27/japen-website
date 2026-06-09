@@ -25,10 +25,12 @@
   <meta property="og:image" content="./og-image.jpg">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Preloads -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@400;700&display=swap"></noscript>
+  <link rel="preload" as="image" href="./hero.jpg" fetchpriority="high">
 
   <!-- Schema.org LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -1312,7 +1314,7 @@
     
     <div class="hero-content">
       <span class="hero-eyebrow">JLPT N5 · N4 · N3 · N2 · N1 academic COACHING center</span>
-      <h1 class="tamil-title">ஜப்பானிய மொழி கற்றுக்கொள்ளுங்கள்</h1>
+      <div class="tamil-title">ஜப்பானிய மொழி கற்றுக்கொள்ளுங்கள்</div>
       <h1>Master Japanese in Tamil &amp; English</h1>
       <p class="hero-subtext">Live online classes taught in Tamil — Trichy's most trusted JLPT coaching for career growth in Japan.</p>
       
@@ -1409,7 +1411,7 @@
           <div class="kanji-watermark">師</div>
           <div class="sensei-image-wrapper">
             <!-- DEVELOPER: Replace with actual image -->
-            <img src="./founder.jpg" alt="Kamalakkannan S" class="sensei-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect width=\'400\' height=\'400\' fill=\'%23222\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-size=\'20\' fill=\'%23666\' font-family=\'sans-serif\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E[FOUNDER PHOTO]%3C/text%3E%3C/svg%3E'">
+            <img src="./founder.jpg" alt="Kamalakkannan S" class="sensei-image" loading="lazy" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect width=\'400\' height=\'400\' fill=\'%23222\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-size=\'20\' fill=\'%23666\' font-family=\'sans-serif\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E[FOUNDER PHOTO]%3C/text%3E%3C/svg%3E'">
           </div>
         </div>
       </div>
@@ -1620,7 +1622,7 @@
           <div class="quote-icon">"</div>
           <p class="testimonial-quote"><!-- PLACEHOLDER QUOTE --> Learning Japanese through Tamil made grammar concepts incredibly easy to grasp.</p>
           <div class="student-info">
-            <img src="./student1.jpg" alt="Student" class="student-photo" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23eee\'/%3E%3C/svg%3E'">
+            <img src="./student1.jpg" alt="Student" class="student-photo" loading="lazy" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23eee\'/%3E%3C/svg%3E'">
             <div>
               <div class="student-name"><!-- PLACEHOLDER NAME --></div>
               <span class="student-outcome"><!-- PLACEHOLDER OUTCOME --> Cleared N5</span>
@@ -1634,7 +1636,7 @@
           <div class="quote-icon">"</div>
           <p class="testimonial-quote"><!-- PLACEHOLDER QUOTE --> The online classes are highly interactive. The structured pathway gave me confidence.</p>
           <div class="student-info">
-            <img src="./student2.jpg" alt="Student" class="student-photo" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23eee\'/%3E%3C/svg%3E'">
+            <img src="./student2.jpg" alt="Student" class="student-photo" loading="lazy" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23eee\'/%3E%3C/svg%3E'">
             <div>
               <div class="student-name"><!-- PLACEHOLDER NAME --></div>
               <div class="student-batch"><!-- PLACEHOLDER BATCH --></div>
@@ -1649,7 +1651,7 @@
           <div class="quote-icon">"</div>
           <p class="testimonial-quote"><!-- PLACEHOLDER QUOTE --> I never thought learning a new script would be this systematic.</p>
           <div class="student-info">
-            <img src="./student3.jpg" alt="Student" class="student-photo" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23eee\'/%3E%3C/svg%3E'">
+            <img src="./student3.jpg" alt="Student" class="student-photo" loading="lazy" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23eee\'/%3E%3C/svg%3E'">
             <div>
               <div class="student-name"><!-- PLACEHOLDER NAME --></div>
               <span class="student-outcome"><!-- PLACEHOLDER OUTCOME --> Cleared N3</span>
