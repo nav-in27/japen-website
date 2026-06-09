@@ -1187,8 +1187,9 @@
     
     @media (max-width: 768px) {
       /* Base Structure */
-      section { padding: 60px 0; }
+      section { padding: 50px 0; }
       .section-title { font-size: 2rem; margin-bottom: 2rem; }
+      .container { padding: 0 20px; }
       
       /* Navigation */
       .nav-links, .navbar .btn { display: none; }
@@ -1210,15 +1211,31 @@
         margin-bottom: 15px; 
       }
       
-      /* Hero */
+      /* Hero Overhaul to prevent overlap */
+      .hero { 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 120px 0 0 0; /* Top padding for navbar */
+        height: auto;
+      }
+      .hero-content {
+        margin: 0 auto 40px; /* Center horizontally, add bottom space before stats */
+      }
       .hero h1 { font-size: 2rem; }
-      .hero .tamil-title { font-size: 1.8rem; }
-      .hero-subtext { font-size: 1rem; }
+      .hero .tamil-title { font-size: 1.8rem; line-height: 1.3; }
+      .hero-subtext { font-size: 1rem; padding: 0 10px; }
       .hero-ctas { flex-direction: column; width: 100%; gap: 15px; }
       .hero-ctas .btn { width: 100%; }
       .trust-pills { flex-direction: column; gap: 10px; width: 100%; align-items: center; }
       
-      /* Stats */
+      /* Stats (Flow naturally instead of absolute) */
+      .hero-stats {
+        position: relative;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding: 30px 0;
+        margin-top: auto;
+      }
       .hero-stats .container { grid-template-columns: 1fr; gap: 15px; }
       .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
       .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
@@ -1229,7 +1246,11 @@
       
       /* Founder */
       .sensei-image-col { order: -1; margin-bottom: 20px; }
-      .pull-quote { margin-top: 30px; padding: 25px; font-size: 1.3rem; }
+      .about-grid { text-align: left; }
+      .sensei-content { text-align: left; }
+      .sensei-bio { font-size: 1rem; line-height: 1.7; text-align: left; }
+      .pull-quote { margin-top: 30px; padding: 25px; font-size: 1.2rem; }
+      .credential-pill { font-size: 0.85rem; padding: 8px 12px; }
       
       /* Curriculum */
       .pathway-container { flex-direction: column; }
