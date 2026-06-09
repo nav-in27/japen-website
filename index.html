@@ -1186,6 +1186,11 @@
     }
     
     @media (max-width: 768px) {
+      /* Base Structure */
+      section { padding: 60px 0; }
+      .section-title { font-size: 2rem; margin-bottom: 2rem; }
+      
+      /* Navigation */
       .nav-links, .navbar .btn { display: none; }
       .hamburger { display: block; }
       
@@ -1200,29 +1205,46 @@
         padding: 30px 5%;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       }
-      
-      .mobile-menu-active .nav-links a { color: var(--text-primary); }
-      
-      .hero h1 { font-size: 2.5rem; }
-      .hero .tamil-title { font-size: 1.8rem; }
-      .hero-ctas { flex-direction: column; }
-      
-      .hero-stats .container { grid-template-columns: 1fr 1fr; gap: 20px; }
-      .stat-item:nth-child(2) { border-right: none; }
-      
-      .cards-grid, .testimonials-grid { grid-template-columns: 1fr; }
-      
-      .pathway-container { flex-direction: column; }
-      .pathway-container::before {
-        top: 50px; left: 50px; bottom: 50px; right: auto; width: 2px; height: auto;
+      .mobile-menu-active .nav-links a { 
+        color: var(--text-primary); 
+        margin-bottom: 15px; 
       }
       
+      /* Hero */
+      .hero h1 { font-size: 2rem; }
+      .hero .tamil-title { font-size: 1.8rem; }
+      .hero-subtext { font-size: 1rem; }
+      .hero-ctas { flex-direction: column; width: 100%; gap: 15px; }
+      .hero-ctas .btn { width: 100%; }
+      .trust-pills { flex-direction: column; gap: 10px; width: 100%; align-items: center; }
+      
+      /* Stats */
+      .hero-stats .container { grid-template-columns: 1fr; gap: 15px; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+      .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+      
+      /* Grids */
+      .cards-grid, .testimonials-grid, .about-grid, .pricing-grid, .footer-grid { grid-template-columns: 1fr; }
+      .contact-grid { display: flex; flex-direction: column; gap: 30px; }
+      
+      /* Founder */
+      .sensei-image-col { order: -1; margin-bottom: 20px; }
+      .pull-quote { margin-top: 30px; padding: 25px; font-size: 1.3rem; }
+      
+      /* Curriculum */
+      .pathway-container { flex-direction: column; }
+      .pathway-container::before {
+        top: 50px; left: 30px; bottom: 50px; right: auto; width: 2px; height: auto;
+      }
+      .pathway-step { width: 100%; text-align: left; padding-left: 60px; margin-bottom: 30px; }
+      .pathway-step .step-number { position: absolute; left: 0; top: 0; margin-left: 0; }
+      .step-arrow { display: none; }
+      
+      /* Results & Footer */
       .results-stats-grid { grid-template-columns: 1fr; gap: 30px; }
       .results-stats-grid::before, .results-stats-grid::after { display: none; }
-      
       .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-      
-      .demo-cta h2 { font-size: 2.5rem; }
+      .demo-cta h2 { font-size: 2rem; }
     }
   </style>
 </head>
